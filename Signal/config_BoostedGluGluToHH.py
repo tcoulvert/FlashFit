@@ -4,7 +4,7 @@ _year = '2022'
 
 signalScriptCfg = {
   # Setup
-  'inputWSDir': '/uscms_data/d3/yzhong/2223v2_samples/ws_singleH/',
+  'inputWSDir': '/uscms/home/tsievert/nobackup/XHYbbgg/CombineFits/BoostedRootFiles/ws_GluGluToHH',
   'procs':'auto', # if auto: inferred automatically from filenames
   'cats':'cat0', # if auto: inferred automatically from (0) workspace
   'ext':'2223v2_H_%s'%_year,#_%s_nGaus'%_year,
