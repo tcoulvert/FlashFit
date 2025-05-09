@@ -123,7 +123,7 @@ for cat in cats:
   print(" --> Extracting events from category: %s"%cat)
  # if inputTreeDir == '': treeName = "Data_%s_%s"%(sqrts__,cat)
  # else: treeName = "%s/Data_%s_%s"%(inputTreeDir,sqrts__,cat)
-  treeName = "gghh_125_13p6TeV_%s"%(cat) ## this should be changed.
+  treeName = "Data_13p6TeV_%s"%(cat) ## this should be changed.
   print("    * tree: %s"%treeName)
   t = f.Get(treeName)
   sqrts_temp = '13p6TeV'
