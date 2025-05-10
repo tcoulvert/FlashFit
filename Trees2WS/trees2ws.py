@@ -245,7 +245,7 @@ for stxsId in data[stxsVar].unique():
     print("line243",opt.productionMode)
     outputWSDir = "/".join(opt.inputTreeFile.split("/")[:-1])+"/ws_%s"%dataToProc(opt.productionMode)
     if not os.path.exists(outputWSDir): os.system("mkdir %s"%outputWSDir)
-    outputWSFile = outputWSDir+"/"+re.sub(".root","_%s.root"%dataToProc(opt.productionMode),opt.inputTreeFile.split("/")[-1])
+    outputWSFile = outputWSDir+"/"+re.sub(".root","_output_M%s_%s.root"%(opt.inputMass, dataToProc(opt.productionMode)),opt.inputTreeFile.split("/")[-1])
     print(" --> Creating output workspace: (%s)"%outputWSFile)
     
   # Open file and initiate workspace
