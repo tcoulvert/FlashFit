@@ -90,6 +90,7 @@ for year in years:
 
     # Identifier
     _id = "%s_%s_%s_%s"%(proc,year,opt.cat,sqrts__)
+    print(_id)
 
     # Mapping to STXS definition here
     _procOriginal = proc
@@ -126,10 +127,10 @@ for year in years:
 
     # Add signal process to dataFrame:
     print(" --> Adding to dataFrame: (proc,cat) = (%s,%s)"%(_proc,_cat))
-                    # if "ggHH" in _proc or "vbfHH" in _proc:
+    # if "ggHH" in _proc or "vbfHH" in _proc:
     data.loc[len(data)] = [year,'sig',_procOriginal,_proc,_proc_s0,_cat,_inputWSFile,_nominalDataName,_modelWSFile,_model,_rate]
-             #   else: 
-             #   data.loc[len(data)] = [year,'singleH',_procOriginal,_proc,_proc_s0,_cat,_inputWSFile,_nominalDataName,_modelWSFile,_model,_rate]
+    # else: 
+    #   data.loc[len(data)] = [year,'singleH',_procOriginal,_proc,_proc_s0,_cat,_inputWSFile,_nominalDataName,_modelWSFile,_model,_rate]
 
 # Background and data processes
 if( not opt.skipBkg)&( opt.cat != "NOTAG" ):

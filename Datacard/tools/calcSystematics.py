@@ -74,6 +74,8 @@ def factoryType(d,s):
     dataHistUp = "%s_%sUp01sigma"%(r.nominalDataName,s['name'])
     dataHistDown = "%s_%sDown01sigma"%(r.nominalDataName,s['name'])
     # Check if syst is var (i.e. weight) in workspace
+    print(s['name'])
+    print("weight_%sUp"%(s['name']))
     if (ws.allVars().selectByName("weight_%sUp"%(s['name'])).getSize()+
             ws.allVars().selectByName("weight_%sDown"%(s['name'])).getSize()):
    # if ws.allVars().selectByName("CMS_hgg_mass").getSize():
