@@ -57,7 +57,7 @@ common_opts = opt.commonOpts
 # Options for job submission
 if opt.batch == 'crab':
   job_opts = "--job-mode crab3"
-  if opt.doCustomCrab: job_opts += " --custom-crab %s/src/flashggFinalFit/Combine/custom_crab.py"%os.environ['CMSSW_BASE']
+  if opt.doCustomCrab: job_opts += " --custom-crab %s/src/FlashFit/Combine/custom_crab.py"%os.environ['CMSSW_BASE']
   job_opts += " --memory %s"%opt.crabMemory
 elif opt.batch == 'condor': 
   sub_opts = "--sub-opts=\'+JobFlavour = \"%s\""%opt.queue
@@ -118,7 +118,7 @@ for fidx in range(len(fits)):
   if opt.snapshotWSFile != '': d_opts = '-d %s --snapshotName MultiDimFit'%opt.snapshotWSFile
   else:
     #d_opts = '-d ../Datacard%s_%s.root'%(opt.ext,opt.mode)
-    d_opts = '-d %s/src/flashggFinalFit/Combine/Datacard%s_%s.root'%(os.environ['CMSSW_BASE'],opt.ext,opt.mode)
+    d_opts = '-d %s/src/FlashFit/Combine/Datacard%s_%s.root'%(os.environ['CMSSW_BASE'],opt.ext,opt.mode)
 
   # If setParameters already in _fit_opts then add to fit opts and set pdfOpts = ''
   if( "setParameters" in _fit_opts )&( pdf_opts != '' ):

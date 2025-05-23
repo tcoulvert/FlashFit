@@ -41,6 +41,18 @@ globalXSBRMap['0310']['TTH'] = {'mode':'constant', 'factor': 0.57}
 globalXSBRMap['0310']['VH'] = {'mode':'constant', 'factor': 0.00545}
 globalXSBRMap['0310']['BBH'] = {'mode':'constant', 'factor': 0.5266}
 
+globalXSBRMap['Boosted'] = od()
+globalXSBRMap['Boosted']['decay'] = {'mode':'constant', 'factor':0.00227}
+globalXSBRMap['Boosted']['ggHH'] = {'mode':'constant', 'factor':0.03413*1.162} # 2*0.581
+globalXSBRMap['Boosted']['vbfHH'] = {'mode':'constant', 'factor':0.001874*1.162}
+
+globalXSBRMap['Boosted']['vbfH'] = {'mode':'constant', 'factor': 4.078}
+globalXSBRMap['Boosted']['ggH'] = {'mode':'constant', 'factor': 52.23}
+globalXSBRMap['Boosted']['ttH'] = {'mode':'constant', 'factor': 0.57}
+globalXSBRMap['Boosted']['vH'] = {'mode':'constant', 'factor': 0.00545}
+globalXSBRMap['Boosted']['bbH'] = {'mode':'constant', 'factor': 0.5266}
+globalXSBRMap['Boosted']['singleH'] = {'mode':'constant', 'factor': 57.41005}
+
 
 #globalXSBRMap['0310']['SingleH'] = {'mode':'constant','factor':1.0}
 # For tutorial analysis: use 13.6 TeV cross sections and branching fraction

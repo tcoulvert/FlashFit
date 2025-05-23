@@ -742,7 +742,7 @@ int main(int argc, char* argv[]){
 
 	std::string ext = is2011 ? "7TeV" : "8TeV";
         if( isFlashgg_ ){
-          if( year_ == "2022" ){ ext = Form("%s_13TeV",year_.c_str()); }
+          if( year_ == "combined" ){ ext = Form("%s_13p6TeV",year_.c_str()); }
           //else{ ext = "13TeV"; } //FIXME 
           else{ ext = Form("%s_13TeV",year_.c_str()); }
         }
@@ -761,6 +761,9 @@ int main(int argc, char* argv[]){
 		} else {
 			catname = Form("cat%d",cat);
 		}
+
+    std::cout << "filename is " << Form("CMS_hgg_%s_%s_bkgshape",catname.c_str(),ext.c_str()) << std::endl;
+
 		RooDataSet *dataFull;
 		RooDataSet *dataFull0;
 		if (isData_) {
@@ -961,6 +964,9 @@ int main(int argc, char* argv[]){
 			}
 			RooCategory catIndex(catindexname.c_str(),"c");
 			RooMultiPdf *pdf = new RooMultiPdf(Form("CMS_hgg_%s_%s_bkgshape",catname.c_str(),ext.c_str()),"all pdfs",catIndex,storedPdfs);
+
+      std::cout << "saved out " << Form("CMS_hgg_%s_%s_bkgshape",catname.c_str(),ext.c_str()) << std::endl;
+
 			//RooRealVar nBackground(Form("CMS_hgg_%s_%s_bkgshape_norm",catname.c_str(),ext.c_str()),"nbkg",data->sumEntries(),0,10E8);
 			RooRealVar nBackground(Form("CMS_hgg_%s_%s_bkgshape_norm",catname.c_str(),ext.c_str()),"nbkg",data->sumEntries(),0,3*data->sumEntries());
 			//nBackground.removeRange(); // bug in roofit will break combine until dev branch brought in
@@ -976,6 +982,8 @@ int main(int argc, char* argv[]){
 
 			mass->setBins(nBinsForMass);
 			RooDataHist dataBinned(Form("roohist_data_mass_%s",catname.c_str()),"data",*mass,*dataFull);
+
+      std::cout << "saved out " << Form("roohist_data_mass_%s",catname.c_str()) << std::endl;
 
 			// Save it (also a binned version of the dataset
 			outputws->import(*pdf);

@@ -41,13 +41,13 @@ XSBRMap['Boosted'] = od()
 
 XSBRMap['Boosted']['decay'] = {'mode':'hgg'}
 
-XSBRMap['Boosted']['GluGluToHH'] = {'mode':'constant','factor': 2*0.582}
-XSBRMap['Boosted']['GluGluHToGG'] = {'mode':'constant'}                          # ggH background production (XS) fb
-XSBRMap['Boosted']['ttHToGG'] = {'mode':'constant'}                           # ttH single-H background production (XS) fb
-XSBRMap['Boosted']['VBFHToGG'] = {'mode':'constant'}                           # VBF single-H background production (XS) fb
-XSBRMap['Boosted']['VHToGG'] = {'mode':'constant'}                             # VH single-H background production (XS) fb
-XSBRMap['Boosted']['bbHToGG'] = {'mode':'constant'} 
-XSBRMap['Boosted']['VBFHH'] = {'mode':'constant','factor': 2*0.582}
+XSBRMap['Boosted']['ggHH'] = {'mode':'constant','factor': 2*0.582}
+XSBRMap['Boosted']['ggH'] = {'mode':'constant'}                          # ggH background production (XS) fb
+XSBRMap['Boosted']['ttH'] = {'mode':'constant'}                           # ttH single-H background production (XS) fb
+XSBRMap['Boosted']['vbfH'] = {'mode':'constant'}                           # VBF single-H background production (XS) fb
+XSBRMap['Boosted']['vH'] = {'mode':'constant'}                             # VH single-H background production (XS) fb
+XSBRMap['Boosted']['bbH'] = {'mode':'constant'} 
+XSBRMap['Boosted']['vbfHH'] = {'mode':'constant','factor': 2*0.582}
 
 
 # Tutorial analysis

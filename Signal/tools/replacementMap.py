@@ -24,6 +24,8 @@ globalReplacementMap["example"]["catRVMap"]["Untagged_Tag0"] = "Untagged_Tag0"
 globalReplacementMap["example"]["catRVMap"]["VBF_Tag0"] = "VBF_Tag0"
 
 
+globalReplacementMap['Boosted'] = od()
+
 
 globalReplacementMap['0310'] = od()
 #test bbgg analysis
